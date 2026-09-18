@@ -1,0 +1,30 @@
+# Modest Darker — Ghostty theme
+
+# Background & text
+background = #0b0b0b
+foreground = #99A0A6
+
+# Cursor & selection
+cursor-color = #ca72e4
+cursor-text = #0b0b0b
+selection-background = #462c4e
+
+# ANSI palette (normal)
+palette = 0=#06060C
+palette = 1=#E95678
+palette = 2=#29D398
+palette = 3=#F29E73
+palette = 4=#26BBD9
+palette = 5=#EE64AC
+palette = 6=#29C5C7
+palette = 7=#99A0A6
+
+# ANSI palette (bright)
+palette = 8=#141414
+palette = 9=#EC6A88
+palette = 10=#2FC995
+palette = 11=#F5AE8B
+palette = 12=#3FC4DE
+palette = 13=#F075B5
+palette = 14=#2AC5C8
+palette = 15=#99A0A6

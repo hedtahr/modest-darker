@@ -1,0 +1,24 @@
+/* Modest Darker — softer fonts (enable under Settings → Appearance → CSS snippets).
+   Lexend is variable, so the 350 weight below applies to it; Atkinson Hyperlegible
+   ships static weights and falls back to 400. Swap the two names to flip preference.
+   Code uses the installed JetBrainsMono Nerd Font (Mono build = single-width glyphs,
+   so nerd icons and tables stay aligned). */
+
+.theme-dark {
+  --font-text-theme: "Lexend", "Atkinson Hyperlegible", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-interface-theme: "Lexend", "Atkinson Hyperlegible", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-monospace-theme: "JetBrainsMono Nerd Font Mono", "JetBrainsMono Nerd Font", "JetBrains Mono", Menlo, monospace;
+
+  /* thinner strokes = less glare; raise to 400 if text looks washed out */
+  --font-normal: 350;
+}
+
+/* code keeps full weight + JetBrains Mono programming ligatures (=>, !=, ->) */
+.theme-dark .cm-content,
+.theme-dark .markdown-rendered code,
+.theme-dark .markdown-rendered pre,
+.theme-dark .markdown-preview-view code,
+.theme-dark .markdown-preview-view pre {
+  font-variant-ligatures: contextual;
+  font-weight: 400;
+}

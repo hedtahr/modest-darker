@@ -1,0 +1,7 @@
+id = "modest-darker"
+name = "Modest Darker"
+schema_version = 1
+version = "0.2.0"
+authors = ["Hedtahr"]
+description = "A tweaked Modest Dark theme with softer panels, purple accents, and a borderless variant."
+repository = "https://github.com/hedtahr/modest-darker"

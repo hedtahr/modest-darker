@@ -1,0 +1,234 @@
+/* Modest Darker — Obsidian port of the Zed theme (dark only).
+   Eye-safe tuning: near-black #0b0b0b background with every text token capped at
+   ~0.42 relative luminance (Zed originals went up to 0.61, e.g. italic/type/link).
+   Hues stay recognizably Modest, just one step less bright.
+
+   Peak luminance + contrast (WCAG) per token family:
+   body 0.42 / 8.6:1 · muted 0.22 / 5.0:1 · faint 0.11 / 3.1:1 · comments 0.05 / 1.8:1
+   syntax 0.26–0.42 / 5.7–8.6:1
+*/
+
+.theme-dark {
+  /* accent — Obsidian derives accent colors from HSL; explicit vars below win */
+  --accent-h: 286;
+  --accent-s: 51%;
+  --accent-l: 67%;
+  --color-accent: #ca72e4;
+  --color-accent-1: #c162de;
+  --color-accent-2: #c162de;
+
+  /* surfaces */
+  --background-primary: #0b0b0b;
+  --background-primary-alt: #0b0b0b;
+  --background-secondary: #0b0b0b;
+  --background-secondary-alt: #0b0b0b;
+  --background-modifier-border: #2b2b2b;
+  --background-modifier-border-hover: #3f3f3f;
+  --background-modifier-border-focus: #ca72e4;
+  --background-modifier-hover: #1e242e;
+  --background-modifier-active-hover: #2e303e80;
+  --background-modifier-form-field: #1c1e26;
+  --background-modifier-error: #ff616e33;
+  --background-modifier-error-hover: #ff616e4d;
+  --background-modifier-success: #8bd15233;
+  --background-modifier-message: #1c1e26;
+
+  /* greys */
+  --text-normal: #99a0a6;
+  --text-muted: #7a828f;
+  --text-faint: #565d69;
+  --text-on-accent: #14161b;
+  --text-on-accent-inverted: #14161b;
+  --text-selection: #ca72e433;
+  --text-highlight-bg: #ca72e433;
+  --text-highlight-bg-active: #ca72e455;
+  --caret-color: #ca72e4;
+
+  /* status colors */
+  --text-error: #ff616e;
+  --text-warning: #e3b868;
+  --text-success: #8bd152;
+
+  /* accent */
+  --text-accent: #ca72e4;
+  --text-accent-hover: #c162de;
+  --interactive-normal: #1c1e26;
+  --interactive-hover: #2e303e;
+  --interactive-accent: #ca72e4;
+  --interactive-accent-hover: #c162de;
+  --interactive-accent-hsl: 286, 51%, 67%;
+
+  /* editor */
+  --active-line-color: #080808;
+  --inline-title-color: #e95678;
+  --h1-color: #e95678;
+  --h2-color: #e95678;
+  --h3-color: #e95678;
+  --h4-color: #e95678;
+  --h5-color: #e95678;
+  --h6-color: #e95678;
+  --bold-color: #eaac8b;
+  --italic-color: #f3b080;
+  --line-height-normal: 1.6;
+
+  /* code + syntax */
+  --code-background: #1c1e26;
+  --code-normal: #99a0a6;
+  --code-comment: #444444;
+  --code-function: #5ab0f6;
+  --code-important: #ca72e4;
+  --code-keyword: #ca72e4;
+  --code-property: #e06c75;
+  --code-punctuation: #56b6c2;
+  --code-string: #97ca72;
+  --code-tag: #e06c75;
+  --code-value: #d99a5e;
+
+  /* links + tags */
+  --link-color: #f5b246;
+  --link-color-hover: #ca72e4;
+  --link-external-color: #f5b246;
+  --link-external-color-hover: #ca72e4;
+  --link-unresolved-color: #e06c75;
+  --link-unresolved-opacity: 0.75;
+  --tag-color: #ca72e4;
+  --tag-color-hover: #c162de;
+  --tag-background: #ca72e41a;
+  --tag-background-hover: #ca72e42e;
+
+  /* lists, rules, quotes, tables */
+  --list-marker-color: #56b6c2;
+  --list-marker-color-hover: #56b6c2;
+  --list-marker-color-collapsed: #565d69;
+  --hr-color: #2b2b2b;
+  --blockquote-border-color: #56b6c2;
+  --blockquote-color: #7a828f;
+  --table-border-color: #2b2b2b;
+  --table-header-background: #1c1e26;
+  --table-row-background-hover: #1e242e;
+  --checkbox-color: #ca72e4;
+  --checkbox-color-hover: #c162de;
+  --checkbox-marker-color: #14161b;
+  --embed-border-left: 2px solid #2b2b2b;
+
+  /* chrome (greys) */
+  --divider-color: #2b2b2b;
+  --tab-outline-color: #2b2b2b;
+  --titlebar-background: #0b0b0b;
+  --titlebar-background-focused: #0b0b0b;
+  --titlebar-text-color: #565d69;
+  --titlebar-text-color-focused: #99a0a6;
+  --ribbon-background: #0b0b0b;
+  --ribbon-background-collapsed: #0b0b0b;
+  --tab-text-color: #565d69;
+  --tab-text-color-active: #99a0a6;
+  --tab-text-color-focused: #99a0a6;
+  --tab-background-active: #0b0b0b;
+  --nav-item-color: #7a828f;
+  --nav-item-color-hover: #99a0a6;
+  --nav-item-color-active: #ca72e4;
+  --nav-item-background-hover: #1e242e;
+  --nav-item-background-active: #ca72e424;
+  --nav-item-color-selected: #ca72e4;
+  --nav-item-background-selected: #ca72e424;
+  --status-bar-background: #0b0b0b;
+  --status-bar-text-color: #565d69;
+  --status-bar-border-color: #2b2b2b;
+  --scrollbar-bg: transparent;
+  --scrollbar-thumb-bg: #6c6f933d;
+  --scrollbar-active-thumb-bg: #6c6f93;
+
+  /* rounded cards, like the Zed theme */
+  --radius-s: 6px;
+  --radius-m: 10px;
+  --radius-l: 14px;
+  --input-radius: 10px;
+
+  /* graph */
+  --graph-node: #ca72e4;
+  --graph-node-focused: #f5b246;
+  --graph-node-tag: #e06c75;
+  --graph-node-attachment: #8bd152;
+  --graph-line: #2b2b2b;
+  --graph-text: #7a828f;
+}
+
+/* syntax tokens Obsidian does not map through --code-* */
+.theme-dark .cm-keyword {
+  color: #ca72e4;
+  font-style: italic;
+}
+
+.theme-dark .cm-def,
+.theme-dark .cm-variable-2 {
+  color: #5ab0f6;
+  font-style: italic;
+}
+
+.theme-dark .cm-type,
+.theme-dark .cm-qualifier {
+  color: #e3b868;
+}
+
+.theme-dark .cm-variable {
+  color: #848d9c;
+}
+
+.theme-dark .cm-variable-3 {
+  color: #46acad;
+}
+
+.theme-dark .cm-atom,
+.theme-dark .cm-number,
+.theme-dark .cm-constant {
+  color: #d99a5e;
+}
+
+.theme-dark .cm-string,
+.theme-dark .cm-string-2 {
+  color: #97ca72;
+}
+
+.theme-dark .cm-comment {
+  color: #444444;
+  font-style: italic;
+}
+
+.theme-dark .cm-operator,
+.theme-dark .cm-punctuation,
+.theme-dark .cm-meta {
+  color: #56b6c2;
+}
+
+.theme-dark .cm-property,
+.theme-dark .cm-tag {
+  color: #e06c75;
+}
+
+.theme-dark .cm-attribute {
+  color: #e3b868;
+}
+
+.theme-dark .cm-link,
+.theme-dark .cm-url {
+  color: #46acad;
+}
+
+.theme-dark .cm-hashtag {
+  color: #ca72e4;
+}
+
+/* markdown */
+.theme-dark .cm-strong,
+.theme-dark .markdown-rendered strong {
+  color: #eaac8b;
+}
+
+.theme-dark .cm-em,
+.theme-dark .markdown-rendered em {
+  color: #f3b080;
+}
+
+.theme-dark .cm-formatting {
+  color: #565d69;
+}

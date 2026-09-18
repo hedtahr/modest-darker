@@ -1,0 +1,9 @@
+/* Modest Darker (Borderless) — enable on top of the Modest Darker theme.
+   Panel borders blend into the background; focus rings stay purple. */
+
+.theme-dark {
+  --background-modifier-border: #0e0e0e;
+  --divider-color: #0e0e0e;
+  --tab-outline-color: #0e0e0e;
+  --status-bar-border-color: #0e0e0e;
+}
